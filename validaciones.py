@@ -6,7 +6,6 @@ def solicitar_texto(mensaje):
             return entrada
         print("Este campo no puede estar vacío. Inténtalo de nuevo.")
 
-
 def solicitar_entero(mensaje):
     """Solicita un número entero positivo al usuario y valida que sea correcto."""
     while True:
@@ -37,5 +36,15 @@ def solicitar_flotante(mensaje):
             except ValueError:
                 print("Error: Por favor, ingresa un número válido.")
        
+
+def solicitar_telefono(mensaje):
+    """Solicita un número de teléfono con 9 dígitos al usuario y valida que sea correcto."""
+    while True:
+        entrada = input(mensaje).strip()
+        if entrada.isdigit() and len(entrada) == 9:
+            return entrada
+        else:
+            print("Error: El número de teléfono debe tener exactamente 9 dígitos.")
+
 
 
